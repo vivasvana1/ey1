@@ -1,0 +1,398 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+    color: #333;
+  transition: background-color 0.3s ease;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #0a7d7f;
+   color: white;
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid #0056b3;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 0.5rem 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Styling the Dashboard Button to be smaller */
+.nav button.dashboard-btn {
+  background-color: #007bff; /* Button background */
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem; /* Smaller padding for a more compact button */
+  border-radius: 5px;
+  font-size: 0.875rem; /* Smaller font size */
+  cursor: pointer;
+  margin-left: 1rem; /* Space between the button and other links */
+}
+
+.nav button.dashboard-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.nav button.dashboard-btn:focus {
+  outline: none; /* Remove focus outline for a cleaner look */
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Color Variables */
+:root {
+  --primary-dark: #003135;
+  --primary-mid: #024950;
+  --accent: #964734;
+  --highlight: #0FA4AF;
+  --light: #AFDDE5;
+  --button-hover: #45a049;
+}
+
+/* Homepage Prevent Scroll */
+.homepage-container {
+  height: 100vh;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Highlight Section */
+.highlight-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.highlight-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Container for the 3 highlights */
+.highlights {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.highlight-item {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  text-align: center;
+  min-width: 250px; /* Ensures a minimum size */
+}
+
+.highlight-item:hover {
+  background-color: #e0e0e0;
+}
+
+.highlight-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.highlight-item p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight-item {
+    width: 80%; /* Makes the highlights items fill the container */
+    margin-bottom: 20px;
+  }
+
+  .notifications-icon {
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+
+  .hero-section {
+    height: 400px; /* Adjust height for smaller screens */
+  }
+}
+
+/* Bell Icon Style */
+.notifications-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1; /* Ensures it's on top of other content */
+}
+
+.bell-icon {
+  background-color: #ff5c8d; /* Custom color for the circle */
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bell-icon i {
+  margin: 0;
+}
+
+/* Notifications Dropdown Style */
+.notifications-dropdown {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.notifications-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notifications-dropdown ul li {
+  padding: 8px;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+}
+
+.notifications-dropdown ul li:hover {
+  background-color: #f9f9f9;
+}
+
+/* Add a notification badge if you have unread notifications */
+.notifications-icon:after {
+  content: "•"; /* Small dot as a badge */
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 18px;
+  color: red;
+}
+
+/* Custom Buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.custom-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.custom-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.custom-button:active {
+  background-color: #3e8e41;
+}
+
+/* Animations for Transitions */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Improve Typography */
+h1, h2, h3, h4 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--highlight);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* Homepage Prevent Scroll */
+.homepage-container {
+  height: 100vh;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+
+.homepage-container * {
+  transition: all 0.3s ease;
+}
+
+/* Add More Spacing Between Sections */
+.section {
+  margin-bottom: 60px;
+}
+
+/* Hero Section (adjustments) */
+.hero-section {
+  position: relative;
+  background-size: cover;
+  height: 700px;
+  z-index: 1; /* Ensure it's below the bell icon */
+}
+
+@media (max-width: 768px) {
+  .notifications-icon {
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+
+  /* Adjustments for other elements */
+  .hero-section {
+    height: 400px; /* Adjust height for smaller screens */
+  }
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px; /* Adjusted padding for smaller button */
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+/* App.css */
+.App {
+  text-align: center;
+}
+
+.contact-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.contact-icon {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.contact-icon:hover {
+  color: #4c9f70; /* Green color on hover */
+}
+
+.contact-icon span {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+/* In index.css or App.css */
+html, body {
+  overflow-x: hidden; 
+  /* Prevent horizontal scrolling */
+  margin: 0;
+  padding: 0;
+}
+

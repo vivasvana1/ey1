@@ -1,0 +1,59 @@
+/* Make sure the chatbot stays on top of everything */
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999; /* Ensure it's over all content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* Style for the chatbot logo (round icon) */
+  .chatbot-logo {
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50; /* Green color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Logo hover effect */
+  .chatbot-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for the text below the logo */
+  .chatbot-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+    max-width: 150px;
+    text-align: center;
+  }
+  
+  /* Add hover effect for the chatbot text */
+  .chatbot-text:hover {
+    color: #4CAF50;
+    background-color: #f0f0f0;
+  }
+  
+  /* Logo Style */
+  .chatbot-logo::before {
+    content: "💬"; /* Add chat bubble icon */
+    font-size: 30px;
+    color: white;
+  }
+  

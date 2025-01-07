@@ -1,0 +1,86 @@
+/* Styles for FAQ Section */
+.faq-section {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .faq-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .faq-cards {
+    display: flex; /* Use flexbox for side-by-side layout */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    justify-content: space-around; /* Space out the FAQ cards */
+    gap: 30px; /* Space between FAQ items */
+  }
+  
+  .faq-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease;
+    text-align: left;
+    width: calc(33.333% - 30px); /* Allow three items per row with a gap */
+    max-width: 350px;
+    box-sizing: border-box;
+  }
+  
+  .faq-card:hover {
+    transform: translateY(-10px); /* Slight hover effect */
+  }
+  
+  .faq-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .faq-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .faq-card a {
+    color: #00bcd4;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .faq-card a:hover {
+    color: #007b8f;
+    text-decoration: underline;
+  }
+  
+  /* Special styling for the highlighted FAQ card */
+  .faq-card.highlighted {
+    background-color: #3498db; /* Blue background for emphasis */
+    color: #fff; /* White text for contrast */
+  }
+  
+  .faq-card.highlighted h3,
+  .faq-card.highlighted p {
+    color: #fff; /* Ensure all text is white */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .faq-card {
+      width: calc(50% - 30px); /* Two items per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .faq-card {
+      width: 100%; /* One item per row on very small screens */
+    }
+  }
+  

@@ -1,0 +1,223 @@
+/* General container for the whole schemes list */
+.schemes-list {
+  width: 100%;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9; /* Slight background to contrast the cards */
+  padding: 20px 0;
+  border-radius: 8px;
+}
+
+/* Title for the page */
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Search bar styling */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  width: 50%;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar:focus {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Filters container */
+.filters-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.filter-select {
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  width: 50%;
+}
+
+.filter-select:focus {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Card container to hold all the schemes */
+.schemes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px; /* Increased gap for better spacing between cards */
+  justify-items: center;
+}
+
+/* Styling for individual scheme cards */
+/* Styling for individual scheme cards */
+.scheme-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  margin: 15px; /* Adds space between cards */
+}
+
+/* Adjust spacing for mobile responsiveness */
+@media (max-width: 768px) {
+  .scheme-card {
+    width: 90%;
+    padding: 20px;
+    margin: 10px 0; /* Vertical spacing for small screens */
+  }
+}
+
+/* Hover effect on the cards */
+.scheme-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Scheme name (bold and larger font) */
+.scheme-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+/* Scheme description styling */
+.scheme-description {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Styling for eligibility, documents, and application process */
+.scheme-eligibility,
+.scheme-documents,
+.scheme-process,
+.scheme-sector {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.scheme-eligibility strong,
+.scheme-documents strong,
+.scheme-process strong,
+.scheme-sector strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Apply button styling */
+.apply-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.apply-button:hover {
+  background-color: #45a049;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 80%;
+  }
+
+  .filters-container {
+    flex-direction: column;
+  }
+
+  .filter-select {
+    margin-bottom: 15px;
+    width: 80%;
+  }
+
+  .scheme-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .scheme-name {
+    font-size: 1.4rem;
+  }
+}
+/* Add spacing between cards and make it responsive */
+@media (max-width: 1200px) {
+  .scheme-card {
+    width: 270px; /* Adjust width for larger screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .scheme-card {
+    width: 220px; /* Adjust for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .scheme-card {
+    width: 100%; /* Full width for mobile screens */
+    max-width: 400px; /* Maximum width on mobile */
+    margin: 10px 0; /* Space out cards on small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .scheme-card {
+    width: 100%; /* Ensure cards take full width on small devices */
+  }
+}
+
+/* Add an interactive animation for when cards are loaded */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add fade-in effect to scheme cards */
+.scheme-card {
+  animation: fadeIn 0.5s ease-in-out;
+}

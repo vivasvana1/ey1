@@ -1,0 +1,175 @@
+.hero-section {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  z-index: 1;
+  color: rgb(243, 243, 243);
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  margin-top: 150px;
+  animation: flyUp 2s ease-out;
+}
+
+.hero-title .highlight {
+  color: #00bcd4;
+  font-size: 1.1em;
+}
+.priya-text {
+  color: white; /* Priya part is white */
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+  animation: flyUp 2.5s ease-out 0.5s; /* Subtitle flies up after title */
+  color: white;
+}
+
+.hero-btn {
+  background-color: #00bcd4;
+  border: none;
+  color: white;
+  padding: 12px 25px; /* Adjusted padding to make the button smaller */
+  font-size: 1rem; /* Adjusted font size to make the button smaller */
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s ease;
+  width: auto; /* Prevent buttons from taking full width */
+}
+
+.hero-btn:hover {
+  background-color: #008c9e;
+  transform: scale(1.05);
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(100%);
+  z-index: 1;
+}
+
+.bottom-buttons {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.rectangle-btn {
+  background-color: #00bcd4;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s, transform 0.3s ease;
+  margin: 0 10px;
+}
+
+.rectangle-btn:hover {
+  background-color: #008c9e;
+  transform: scale(1.05);
+}
+
+/* Keyframes for flying up animation */
+@keyframes flyUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Start below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+.cta-section {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background-color: #ff9800; /* A contrasting color for "Learn More" */
+  border: none;
+  color: white;
+  padding: 12px 25px; /* Adjusted padding to make the button smaller */
+  font-size: 1rem; /* Adjusted font size to match "Testimonials" and "Services" */
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e68900; /* Darker shade of orange */
+  transform: scale(1.05);
+}
+
+/* Mobile responsive styling */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #008c9e;
+  }
+
+  .hero-btn {
+    font-size: 1rem;
+    padding: 10px 20px; /* Adjusted padding for smaller button */
+  }
+
+  .rectangle-btn {
+    font-size: 0.9rem;
+    padding: 10px 25px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-btn {
+    font-size: 1rem;
+    padding: 10px 20px; /* Adjusted padding for mobile */
+  }
+}

@@ -1,0 +1,106 @@
+/* General header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: rgb(3, 141, 136);
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* Using Poppins font */
+}
+
+/* Hover effect for the header */
+.header:hover {
+  background-color: #444; /* Darker background on hover */
+}
+
+/* Main header text styling */
+.main-header {
+  font-size: 2rem; /* Larger font size for the main header */
+  font-weight: 700; /* Bold text for the main header */
+  color: #710909; /* White text */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  margin: 0; /* No margin for the header */
+  letter-spacing: 2px; /* Slightly spaced letters for a clean look */
+  flex-grow: 1; /* Ensure the header takes up available space */
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Increased gap for better visual separation */
+  margin-left: auto; /* Align navbar to the right */
+}
+
+/* Login icon styling */
+.login-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for login icon and text */
+.login-link:hover {
+  color: #4CAF50; /* Green color on hover */
+}
+
+/* Login Icon */
+.login-icon {
+  color: #7c0000; /* White color for the icon */
+  font-size: 1.6rem; /* Icon size */
+  transition: color 0.3s ease;
+  margin-right: 12px; /* Space between the icon and text */
+}
+
+/* Logout Icon styling */
+.logout-icon {
+  color: #f44336; /* Red color for the icon */
+  font-size: 1.6rem; /* Icon size */
+  cursor: pointer; /* Show pointer on hover */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Change color of logout icon on hover */
+.logout-icon:hover {
+  color: #d32f2f; /* Darker red on hover */
+}
+
+/* Remove focus outline */
+.logout-icon:focus {
+  outline: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px; /* Slightly reduced padding for mobile */
+  }
+
+  .main-header {
+    font-size: 1.6rem; /* Slightly smaller text on mobile */
+  }
+
+  .navbar {
+    gap: 10px; /* Adjust gap for mobile */
+  }
+
+  .login-icon {
+    font-size: 1.7rem; /* Adjust icon size for mobile */
+  }
+
+  .logout-icon {
+    font-size: 1.4rem; /* Make logout icon smaller on mobile */
+  }
+}
+
+/* Ensure navbar items are aligned to the right */
+.navbar .right {
+  margin-left: auto;
+}
+

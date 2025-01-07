@@ -1,0 +1,143 @@
+/* General container styles */
+.schemes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title and description */
+.schemes-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.schemes-container p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Search and filter bar */
+.search-filter-bar {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.search-input, .filter-select {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.search-input:focus, .filter-select:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+.search-input {
+  flex: 1;
+  min-width: 300px;
+}
+
+.filter-select {
+  min-width: 150px;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Schemes list */
+.schemes-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.scheme-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scheme-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scheme-card h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.scheme-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.scheme-card strong {
+  color: #333;
+}
+
+.learn-more-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00bcd4;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.learn-more-link:hover {
+  color: #008c9e;
+  text-decoration: underline;
+}
+
+/* Loading styles */
+.schemes-list p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .schemes-container {
+    padding: 15px;
+  }
+
+  .scheme-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .scheme-card p {
+    font-size: 0.95rem;
+  }
+
+  .search-input, .filter-select {
+    width: 100%;
+    min-width: unset;
+  }
+}

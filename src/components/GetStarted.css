@@ -1,0 +1,101 @@
+/* General Styles for the Get Started Page */
+.get-started-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  background-color: #ffffff;
+}
+
+/* Title and Subtitle */
+.title {
+  font-size: 2.5rem;
+  color: #2a9d8f;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Heading Styling */
+.heading {
+  font-size: 1.5rem;
+  color: #264653;
+  margin-bottom: 10px;
+}
+
+/* Card Styling */
+.card {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 180px;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* Icon Link Styling */
+.icon-link {
+  color: #264653;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.icon-link:hover {
+  color: #e76f51;
+}
+
+/* Navigation Links */
+.nav-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.link {
+  font-size: 1.1rem;
+  margin: 0 15px;
+  color: #e76f51;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #264653;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .get-started-container {
+    padding: 2rem;
+  }
+
+  .link {
+    font-size: 1rem;
+  }
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .card {
+    width: 150px;
+  }
+}

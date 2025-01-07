@@ -1,0 +1,81 @@
+.privacy-policy {
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.privacy-header {
+  text-align: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.privacy-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.privacy-header .tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.intro-section {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.content-section {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.content-section h2 {
+  font-size: 1.5rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.content-section ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.highlight-box {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #ffefc1;
+  border: 1px solid #f0d78c;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-section li {
+  margin: 5px 0;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 8px;
+}

@@ -1,0 +1,198 @@
+/* Base styles for the page */
+.schemes-page {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh; /* Ensure the page takes full height */
+}
+
+/* Page title */
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Container for scheme cards */
+.schemes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-height: 500px;  /* Set a maximum height for the container */
+  overflow-y: auto;   /* Make the container scrollable vertically */
+  padding: 10px;
+}
+
+/* Styling for individual scheme cards */
+.scheme-card {
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevent overflow outside the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 300px; /* Fixed width for consistent sizing */
+  display: flex;
+  flex-direction: column; /* Stack image and details vertically */
+  padding: 15px; /* Add padding inside the card */
+  position: relative; /* For button positioning */
+  background-color: #fff;
+  transform: scale(1);
+  transition: all 0.3s ease;
+  max-height: 600px; /* Allow the card to grow but constrain height */
+}
+
+/* Hover effect for card */
+.scheme-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15); /* Intensified shadow on hover */
+}
+
+/* Image styling inside each card */
+.scheme-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Make the image scale a little when hovering over the card */
+.scheme-card:hover .scheme-image {
+  transform: scale(1.1); /* Slight zoom on image hover */
+}
+
+/* Scheme card details section */
+.scheme-details {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* Align content at the top */
+  align-items: flex-start;  /* Horizontally align to the left */
+  flex-grow: 1;  /* Allow description to take available space */
+  overflow-y: auto;  /* Enable vertical scrolling if content exceeds max height */
+  width: 100%; /* Ensure the details section takes full width */
+  max-height: 350px; /* Max height for the content area */
+}
+
+/* Scheme name */
+.scheme-name {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: bold;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+/* Scheme description */
+.scheme-description {
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1; /* Allow description to take available space */
+  margin-bottom: 10px;
+  line-height: 1.5;
+  max-height: 200px;  /* Set a limit on the description area */
+  overflow-y: auto;  /* Enable scrolling within the description if it overflows */
+}
+
+/* Eligibility text */
+.scheme-eligibility {
+  font-size: 1rem;
+  color: #007bff; /* Make eligibility text standout */
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Apply button and link styling */
+.scheme-card button,
+.scheme-card a {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px; /* Increase padding for better click area */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make button take full width of the card */
+  text-align: center; /* Center the button text */
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+  margin-top: 10px; /* Space between content and button */
+}
+
+/* Hover effect for button */
+.scheme-card button:hover,
+.scheme-card a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Apply button styling */
+.scheme-card button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.scheme-card button:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Add spacing between cards and make it responsive */
+@media (max-width: 1200px) {
+  .scheme-card {
+    width: 270px; /* Adjust width for larger screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .scheme-card {
+    width: 220px; /* Adjust for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .scheme-card {
+    width: 100%; /* Full width for mobile screens */
+    max-width: 400px; /* Maximum width on mobile */
+    margin: 10px 0; /* Space out cards on small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .scheme-card {
+    width: 100%; /* Ensure cards take full width on small devices */
+  }
+}
+
+/* Add an interactive animation for when cards are loaded */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add fade-in effect to scheme cards */
+.scheme-card {
+  animation: fadeIn 0.5s ease-in-out;
+}

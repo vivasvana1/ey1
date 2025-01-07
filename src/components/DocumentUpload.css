@@ -1,0 +1,256 @@
+/* General Layout Improvement */
+body {
+  background-color: #f4f4f4; /* Light grey background */
+  color: #333; /* Dark text for good readability */
+  font-family: 'Arial', sans-serif; /* Use a neutral, readable font */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for overall layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1d3557; /* Dark blue */
+  font-weight: bold;
+}
+
+/* Document Upload Section Styling */
+.document-upload {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff; /* White background for the upload section */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease;
+}
+
+.document-upload:hover {
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+/* Title for Document Upload Section */
+.upload-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #1d3557; /* Dark blue */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Upload Area Styling */
+.upload-area {
+  border: 2px dashed #1d3557; /* Dark blue dashed border */
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f1f1f1; /* Light grey background */
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.upload-area:hover {
+  border-color: #457b9d; /* Lighter blue on hover */
+  background-color: #e6f0f7; /* Light blue on hover */
+}
+
+/* Text inside Upload Area */
+.upload-text {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333; /* Dark text */
+}
+
+/* Browse Button Styling */
+.browse-btn {
+  padding: 12px 24px;
+  background-color: #1d3557; /* Dark blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.browse-btn:hover {
+  background-color: #457b9d; /* Lighter blue on hover */
+  transform: scale(1.05);
+}
+
+/* Document List Styling */
+.document-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+/* Document Category Titles */
+.category-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1d3557; /* Dark blue */
+}
+
+/* Document Item Styling */
+.document-item {
+  margin-bottom: 20px;
+}
+
+.document-label {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+/* File Info Styling */
+.file-info {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #999; /* Light grey text for file info */
+}
+
+/* Uploaded Files Styling */
+.uploaded-files {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* File Icon Styling */
+.file-icon {
+  text-align: center;
+  background-color: #f1f1f1; /* Light grey background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.file-icon:hover {
+  transform: scale(1.05);
+}
+
+.file-icon img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.file-icon p {
+  font-size: 1rem;
+  color: #1d3557; /* Dark blue */
+  margin: 0;
+}
+
+/* Mobile Layout Styling */
+@media (max-width: 768px) {
+  .document-upload {
+    padding: 20px 15px;
+  }
+
+  .file-icon {
+    width: 120px; /* Smaller file icons for mobile */
+  }
+
+  .upload-title {
+    font-size: 1.2rem;
+  }
+
+  .upload-text {
+    font-size: 1rem;
+  }
+
+  .file-info {
+    font-size: 0.8rem;
+  }
+
+  .browse-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Style for Clear All Files button */
+.clear-all-btn {
+  font-size: 14px; /* Smaller text size */
+  padding: 8px 16px; /* Smaller padding */
+  background-color: #e60000; /* Red color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px; /* Add space from Save Progress button */
+  transition: background-color 0.3s ease;
+}
+
+.clear-all-btn:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+
+/* Add space between the Save Progress button and the Clear All Files button */
+.save-progress-container {
+  margin-bottom: 20px; /* Space between Save Progress and Clear All */
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #1d3557; /* Dark blue for the filled part */
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Button styling for action buttons */
+button {
+  font-size: 16px;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}

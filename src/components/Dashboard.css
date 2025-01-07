@@ -1,0 +1,183 @@
+/* General Dashboard Styling */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+  justify-content: flex-start;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #3498db;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+  max-height: 90vh;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+  width: 250px;
+}
+
+.sidebar h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  transition: color 0.3s ease;
+}
+
+.sidebar:hover h3 {
+  color: white;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  background-color: #000000;
+  border: 2px solid #2980b9;
+  border-radius: 8px;
+  color: #333;
+  font-family: 'Georgia', serif;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.sidebar ul li:hover {
+  background-color: #2980b9;
+  color: rgb(0, 0, 0);
+  padding-left: 15px;
+  border-radius: 5px;
+}
+
+.sidebar ul li.active {
+  background-color: #2980b9;
+  color: black;
+  font-weight: bold;
+}
+
+/* Main Content Area */
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.progress-section,
+.notifications-section,
+.overview-section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+/* Dashboard Overview Cards */
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px; /* Ensures card has a consistent height */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: #030303;
+  margin-bottom: 15px;
+}
+
+.view-details-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.view-details-link:hover {
+  text-decoration: underline;
+}
+
+/* Status colors */
+.verified {
+  color: green;
+}
+
+.unverified {
+  color: red;
+}
+
+.completed {
+  color: green;
+}
+
+.pending {
+  color: orange;
+}
+
+/* Profile Status */
+.profile-status.completed {
+  color: green;
+}
+
+.profile-status.incomplete {
+  color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .overview-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-cards {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+}

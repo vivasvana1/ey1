@@ -1,0 +1,84 @@
+.overview-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .overview-header {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .notifications-section,
+  .schemes-section,
+  .documents-section,
+  .additional-features-section {
+    margin-bottom: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  
+  .notifications-list,
+  .schemes-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .notification-item,
+  .scheme-item {
+    background-color: #fff;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .documents-summary {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .document-card {
+    flex: 1;
+    margin: 0 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+  }
+  
+  .document-card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .document-card.verified {
+    background-color: #4caf50; /* Green for verified */
+  }
+  
+  .document-card.pending {
+    background-color: #ff9800; /* Orange for pending */
+  }
+  
+  .additional-features-section p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  

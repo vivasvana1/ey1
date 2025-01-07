@@ -1,0 +1,101 @@
+/* GrievanceForm.css */
+.grievance-form {
+  width: 100%;
+  max-width: 800px; /* Increased form width */
+  margin: 30px auto; /* Added top/bottom margin for better spacing */
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern look */
+  font-family: Arial, sans-serif; /* Clear and easy-to-read font */
+}
+
+.grievance-form h2 {
+  text-align: center;
+  font-size: 24px; /* Larger heading for emphasis */
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased space between form fields */
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 16px; /* Slightly larger label text */
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px; /* Increased padding for more comfort */
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Slightly rounded edges */
+  font-size: 18px; /* Larger input text */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for focus effect */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4CAF50; /* Focus effect with green color */
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px; /* Larger minimum height for text area */
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px; /* Increased button font size */
+  border: none;
+  border-radius: 6px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #45a049;
+  transform: translateY(-2px); /* Subtle hover effect */
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px); /* Button active state */
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 16px; /* Increased error message size */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .grievance-form {
+    padding: 20px; /* Reduce padding on smaller screens */
+    max-width: 100%; /* Make the form take full width on small screens */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Smaller input text on mobile */
+  }
+
+  button {
+    font-size: 16px; /* Smaller button text on mobile */
+  }
+}

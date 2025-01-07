@@ -1,0 +1,18 @@
+.save-progress-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .save-button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .save-button:hover {
+    background-color: #005cbf;
+  }
+  

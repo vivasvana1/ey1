@@ -1,0 +1,140 @@
+/* General Profile Container Styling */
+.profile-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: flyIn 1s ease-out;
+}
+
+/* Header and Description */
+.profile-header {
+  font-size: 2rem;
+  color: #1d3557; /* Dark Blue */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profile-description {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Profile Picture Section */
+.profile-picture-section {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-picture-input {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: #1d3557;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-picture-input:hover {
+  background-color: #457b9d;
+}
+
+/* Form Styling */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.profile-input:focus {
+  border-color: #1d3557;
+  outline: none;
+}
+
+/* Phone Input Section */
+.phone-input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.country-code-dropdown {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 80px;
+  transition: all 0.3s ease;
+}
+
+.phone-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.country-code-dropdown:focus,
+.phone-input:focus {
+  border-color: #1d3557;
+  outline: none;
+}
+
+/* Save Button */
+.save-button {
+  padding: 12px 20px;
+  background-color: #1d3557;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+.save-button:hover {
+  background-color: #457b9d;
+  transform: scale(1.05);
+}
+
+/* Fly-In Animation */
+@keyframes flyIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

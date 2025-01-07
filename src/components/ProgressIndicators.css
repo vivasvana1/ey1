@@ -1,0 +1,39 @@
+.progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 999;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.progress-step.active {
+  font-weight: bold;
+  color: #4caf50; /* Change to the active step color */
+}
+
+.progress-line {
+  width: 50px;
+  height: 2px;
+  background-color: #ccc;
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.progress-step span {
+  display: inline-block;
+  padding: 0 5px;
+}

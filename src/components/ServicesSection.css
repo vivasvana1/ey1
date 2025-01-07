@@ -1,0 +1,60 @@
+/* Styles for Service Section */
+.service-section {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.service-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.services {
+  display: flex; /* Use flexbox for side-by-side layout */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: center; /* Center the services horizontally */
+  gap: 30px; /* Space between service items */
+}
+
+.service-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease;
+  text-align: center;
+  width: calc(33.333% - 30px); /* Allow three items per row with a gap */
+  max-width: 350px;
+  box-sizing: border-box;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+}
+
+.service-item i {
+  font-size: 3rem;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .service-item {
+    width: calc(50% - 30px); /* Two items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-item {
+    width: 100%; /* One item per row on very small screens */
+  }
+}

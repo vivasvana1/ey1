@@ -1,0 +1,7 @@
+POST http://127.0.0.1:5000/api/
+Content-Type: application/json
+
+{
+  "sector": "Agriculture",
+  "eligibility_criteria": "Must be a farmer with an income below 5 lakhs"
+}
